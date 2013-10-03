@@ -15,6 +15,7 @@ inoremap ' ''<LEFT>
 inoremap " ""<LEFT>
 let g:SuperTabRetainCompletionType=2
 let g:SuperTabDefaultCompletionType="<C-X><C-O>"
+let g:languagetool_jar='$HOME/languagetool-2.3/languagetool-commandline.jar'
 set autoindent
 set smartindent
 set tabstop=4
