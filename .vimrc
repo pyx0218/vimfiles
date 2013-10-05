@@ -26,7 +26,7 @@ filetype on            " enables filetype detection
 filetype plugin on     " enables filetype specific plugins
 filetype indent on
 let g:pyflakes_use_quickfix = 1
-let g:pydiction_location = '/home/milannic/vimPlugin/pydiction-1.2/complete-dict'
+let g:pydiction_location = '$HOME/.vim/complete-dict'
 let Tlist_Use_Right_Window=1 
 "let Tlist_File_Fold_Auto_Close=1
 let Tlist_Show_One_File=1
