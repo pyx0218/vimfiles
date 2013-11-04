@@ -2,6 +2,7 @@ execute pathogen#infect()
 :set nocompatible
 set backspace=indent,eol,start
 set guifont=Monospace\ 12
+:setlocal spell spelllang=en_us
 :cs add /home/milannic/linux-3.11/cscope.out /home/milannic/linux-3.11
 syntax enable
 syntax on
