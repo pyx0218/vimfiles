@@ -48,7 +48,10 @@ set ofu=syntaxcomplete#Complete
 "autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 "autocmd FileType c set omnifunc=ccomplete#Complete
 "autocmd FileType cpp set omnifunc=cppcomplete#Complete
-"autocmd FileType java set omnifunc=javacomplete#Complete
+autocmd FileType java set omnifunc=javacomplete#Complete
+:setlocal completefunc=javacomplete#CompleteParamsInfo 
+:inoremap <buffer> <C-X><C-U> <C-X><C-U><C-P> 
+:inoremap <buffer> <C-S-Space> <C-X><C-U><C-P> 
 
 " OmniCppComplete
 let OmniCpp_NamespaceSearch = 1
