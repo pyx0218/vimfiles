@@ -1,7 +1,7 @@
 execute pathogen#infect()
 :set nocompatible
 set backspace=indent,eol,start
-set guifont=Monospace\ 12
+:set guifont=Menlo:h16
 :setlocal spell spelllang=en_us
 :cs add /home/milannic/linux-3.11/cscope.out /home/milannic/linux-3.11
 syntax enable
@@ -106,7 +106,7 @@ exec "!gcc % -o %< -gstabs+"
 exec "!gdb %<"
 endfunc
 
-map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+map <C-m>o :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 if(has("win32") || has("win95") || has("win64") || has("win16"))
     let g:iswindows=1
@@ -115,7 +115,7 @@ else
 endif
 autocmd BufEnter * lcd %:p:h
 
-map <F12> :call Do_CsTag()<CR>
+map <C-m>o :call Do_CsTag()<CR>
 nmap <C-m>s :cs find s <C-R>=expand("<cword>")<CR><CR>
 nmap <C-m>g :cs find g <C-R>=expand("<cword>")<CR><CR>
 nmap <C-m>c :cs find c <C-R>=expand("<cword>")<CR><CR>
