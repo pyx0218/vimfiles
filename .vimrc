@@ -17,6 +17,7 @@ inoremap " ""<LEFT>
 let g:SuperTabRetainCompletionType=2
 let g:SuperTabDefaultCompletionType="<C-X><C-O>"
 let g:languagetool_jar='$HOME/languagetool-2.3/languagetool-commandline.jar'
+let b:classpath = '.'
 set autoindent
 set smartindent
 set tabstop=4
@@ -49,7 +50,10 @@ set ofu=syntaxcomplete#Complete
 "autocmd FileType c set omnifunc=ccomplete#Complete
 "autocmd FileType cpp set omnifunc=cppcomplete#Complete
 autocmd FileType java set omnifunc=javacomplete#Complete
+autocmd FileType java call javacomplete#SetSourcePath('.')
+"autocmd FileType java call javacomplete#SetClassPath(b:classpath)
 :setlocal completefunc=javacomplete#CompleteParamsInfo 
+autocmd FileType java call java_parser#InitParser(getline('^', '$'))
 :inoremap <buffer> <C-X><C-U> <C-X><C-U><C-P> 
 :inoremap <buffer> <C-S-Space> <C-X><C-U><C-P> 
 
